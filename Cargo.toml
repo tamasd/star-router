@@ -1,0 +1,26 @@
+[package]
+name = "star-router"
+version = "0.1.0"
+authors = ["Tamás Demeter-Haludka <tamas@demeter-haludka.hu>"]
+edition = "2018"
+include = ["src/**/*", "benches/**/*"]
+
+[dependencies]
+fnv = "1.0.7"
+http = "0.2.1"
+url = "2.1.1"
+thiserror = "1.0.20"
+
+[dev-dependencies]
+criterion = "0.3"
+rand = "0.7"
+rstest = "0.6.4"
+
+[target.x86_64-unknown-linux-gnu]
+rustflags = [
+    "-C", "link-arg=-fuse-ld=lld",
+]
+
+[[bench]]
+name = "lookup_benchmark"
+harness = false

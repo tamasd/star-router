@@ -1,0 +1,11 @@
+/target
+Cargo.lock
+.idea
+.vscode
+*.iml
+
+bench
+perf.data*
+flamegraph.svg
+tarpaulin-report.html
+cobertura.xml
